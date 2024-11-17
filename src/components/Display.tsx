@@ -1,10 +1,7 @@
 import { useNavigate } from "react-router-dom"
-import { useState } from "react";
 export const Display = ({background} : any) =>{
     const navigate = useNavigate();
-    const [pathType,setPathType] = useState("");
     const handleButton = async (type : string) =>{
-        setPathType(type)
         navigate("/wallet",{state : {pathType : type }});
     }
     return (
